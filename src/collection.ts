@@ -22,7 +22,9 @@ class Colletion implements MovingAverageInterface {
   }
 
   private average(): number {
-    return this.items.reduce((acc, current) => acc + current, 0) / this.items.length
+    const average = this.items.reduce((acc, current) => acc + current, 0) / this.items.length;
+
+    return Number(average.toFixed(5));
   }
 
   next(val: number): number {
