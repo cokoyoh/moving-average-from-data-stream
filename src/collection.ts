@@ -1,5 +1,5 @@
 interface MovingAverageInterface {
-  next(number): number
+  next(val: number): number
 }
 
 class Colletion implements MovingAverageInterface {
@@ -11,7 +11,7 @@ class Colletion implements MovingAverageInterface {
     this.items = [];
   }
 
-  private add(item: number) {
+  private add(item: number): Colletion {
     if (this.items.length === this.size) {
         this.items.shift();
     }
