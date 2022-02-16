@@ -1,0 +1,24 @@
+{
+  "name": "moving-average-from-data-stream",
+  "version": "1.0.0",
+  "description": "Given a stream of integers and a window size, calculate the moving average of all integers in the sliding window.",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc-watch --onsuccess \"node dist/index.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cokoyoh/moving-average-from-data-stream.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cokoyoh/moving-average-from-data-stream/issues"
+  },
+  "homepage": "https://github.com/cokoyoh/moving-average-from-data-stream#readme",
+  "devDependencies": {
+    "tsc-watch": "^4.6.0",
+    "typescript": "^4.5.5"
+  }
+}
