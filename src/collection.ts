@@ -17,6 +17,8 @@ class Colletion implements MovingAverageInterface {
     }
   
     this.items.push(item);
+
+    return this;
   }
 
   private average(): number {
@@ -24,9 +26,7 @@ class Colletion implements MovingAverageInterface {
   }
 
   next(val: number): number {
-    this.add(val);
-
-    return this.average();
+    return this.add(val).average();
   }
 }
 
