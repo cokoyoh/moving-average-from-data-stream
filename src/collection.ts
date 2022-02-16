@@ -11,23 +11,23 @@ class Colletion implements MovingAverageInterface {
     this.items = [];
   }
 
-  add(item: number) {
-    if (this.items.length < this.size) {
-       this.items.push(item);
+  private add(item: number) {
+    if (this.items.length === this.size) {
+        this.items.shift();
     }
-
-    this.items.shift();
-    
+  
     this.items.push(item);
   }
 
-  average(): number {
-    return this.items.reduce((acc, current) => acc + current, 0) / this.size;
+  private average(): number {
+    return this.items.reduce((acc, current) => acc + current, 0) / this.items.length
   }
 
   next(val: number): number {
     this.add(val);
-    
+
     return this.average();
   }
 }
+
+export { Colletion };
