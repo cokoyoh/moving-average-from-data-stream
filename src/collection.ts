@@ -1,5 +1,5 @@
 interface MovingAverageInterface {
-  next: (number) => number
+  next(number): number
 }
 
 class Colletion implements MovingAverageInterface {
