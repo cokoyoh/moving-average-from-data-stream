@@ -3,7 +3,7 @@ interface MovingAverageInterface {
 }
 
 class Colletion implements MovingAverageInterface {
-  private size: number;
+  private readonly size: number;
   private items: Array<number>
 
   constructor(size: number) {
